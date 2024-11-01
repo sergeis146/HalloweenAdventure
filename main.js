@@ -10,15 +10,15 @@ function startGame() {
 }
 //starter game code
 function main() {
-alert("It is Halloween night, and your friends dared you to explore a cemetery which they claim to be haunted.");
+alert("It is Halloween night 🎃, and your friends dared you to explore a cemetery 🪦 which they claim to be haunted.");
 let ans1 = +prompt("Do you (1) choose to explore the cemetery, or (2) reject their dare?");
 
 if (ans1 == 1){
-    direction = +prompt("Within the cemetery, there is two paths. Would you like to explore (1) the graveyard or (2) the church.")
+    direction = +prompt("Within the cemetery, there is two paths. Would you like to explore (1) the graveyard 🪦 or (2) the church ⛪.")
     choice();
         }
 else if(ans1 == 2) {
-    alert("Your friends make fun of you, try again.");
+    alert("Your friends 👥 make fun of you, try again.");
     main();
     }
 else {
@@ -60,7 +60,7 @@ function choice(){
             
         }
         else {
-            alert("You did not input a valid answer, please try again.");
+            alert("Sorry, I don't think you can escape fate, try again.");
             main();
         }
 
