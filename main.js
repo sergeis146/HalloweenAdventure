@@ -95,24 +95,23 @@ function endGame(){
     alert("Thank you for playing!" );
 }
 function churchFight() {
-    weapon = prompt(`${name} what do you want to pickup from the self to fight? A shovel, flashlight, stick, broken laptop or a painting?`)
-    outcome = Math.round((Math.random() * 4) + 1);
+    weapon = prompt(`${name}, what do you want to pick up from the shelf to fight? A shovel, flashlight, stick, broken laptop, or a painting?`);
+    outcome = Math.round(Math.random() * 4) + 1;
+
     if (outcome == 1) {
-        alert(`You pickup the ${weapon} and try to fight, but it snaps in half and you stand there, waiting for your end. The creatures leaps onto you and the next thing you know you are lying in the hospital bed, your friends surrounding you.`);
+        alert(`You picked up the ${weapon} and tried to fight, but it snaps in half. You stand there, waiting for your end. The creature leaps onto you, and the next thing you know, you are lying in a hospital bed, your friends surrounding you.`);
         endGame();
-    }
-    else if (outcome == 2) {
-        alert(` You pickup the ${weapon} and attack, you hit the creature in the head and it falls down, you turn around and run away.`);
+    } else if (outcome == 2) {
+        alert(`You picked up the ${weapon} and attacked. You hit the creature in the head, and it falls down; you turn around and run away.`);
         endGame();
-    }
-    else if (outcome == 3) {
-        alert(` You pickup the ${weapon} leaping onto the creature you hit the creature but nothing happens, he just growls. He picks you up and carries you over to a gravestone with your name writen on it. He throws you in and scratches todays date.`);
+    } else if (outcome == 3) {
+        alert(`You picked up the ${weapon} and leaped onto the creature, but nothing happens; he just growls. He picks you up and carries you over to a gravestone with your name written on it. He throws you in and scratches today's date.`);
         endGame();
-    }
-    else if (outcome == 4) {
-         alert(` You pickup the ${weapon} but then before you know it he leaps onto you, you hold out your ${weapon} and try to defend. The creature keeps saying ${name}, but you are lucky and are able to stab him, you run off and see that your friends ran off scared. You get home safely`);
+    } else if (outcome == 4) {
+        alert(`You picked up the ${weapon}, but before you know it, he leaps onto you. You hold out your ${weapon} and try to defend. The creature keeps saying ${name}, but you are lucky and stab him. You run off and see that your friends ran off scared. You get home safely.`);
         endGame();
     }
 }
+
 //Starts the game
 startGame();
