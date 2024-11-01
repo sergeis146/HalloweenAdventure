@@ -121,8 +121,9 @@ function restartGame() {
         endGame();
     }
     else {
-        ("It appears that the ghosts haunted you and you did not input a proper choice, try again.);
+        ("It appears that the ghosts haunted you and you did not input a proper choice, try again.");
         restartGame();
+    }
 }
 //Starts the game
 startGame();
