@@ -28,7 +28,7 @@ else {
     alert("You did not input a valid answer, please try again.");
     main();
 }
-endGame();
+restartGame();
 }
 //starts off the graveyard path
 function graveyard(){
@@ -75,12 +75,12 @@ function choice(){
 function church2Choice(){
     if (churchChoice == 1){
         alert(`You keep walking, you hear someone say ${name}, you black out, the next thing you know you are lying in a hospital with all your friends sitting worried.`)
-        endGame();
+        restartGame();
     }
 
     else if (churchChoice == 2) {
         alert(`You run out of the church, someone behind you yells ${name} soon you see the exit of the graveyard, the door is closed, your friends left you.`)
-        endGame();
+        restartGame();
     }
     else if (churchChoice == 3) {
         churchFight();
@@ -100,18 +100,28 @@ function churchFight() {
 
     if (outcome == 1) {
         alert(`You picked up the ${weapon} and tried to fight, but it snaps in half. You stand there, waiting for your end. The creature leaps onto you, and the next thing you know, you are lying in a hospital bed, your friends surrounding you.`);
-        endGame();
+        restartGame();
     } else if (outcome == 2) {
         alert(`You picked up the ${weapon} and attacked. You hit the creature in the head, and it falls down; you turn around and run away.`);
-        endGame();
+        restartGame();
     } else if (outcome == 3) {
         alert(`You picked up the ${weapon} and leaped onto the creature, but nothing happens; he just growls. He picks you up and carries you over to a gravestone with your name written on it. He throws you in and scratches today's date.`);
-        endGame();
+        restartGame();
     } else if (outcome == 4) {
         alert(`You picked up the ${weapon}, but before you know it, he leaps onto you. You hold out your ${weapon} and try to defend. The creature keeps saying ${name}, but you are lucky and stab him. You run off and see that your friends ran off scared. You get home safely.`);
-        endGame();
+        restartGame();
     }
 }
-
+function restartGame() {
+    restart = +prompt(`Thank You For Playing ${name} Would you like to (1) play again, or (2) Quit and Miss out on the other 7 endings?`);
+    if (restart == 1) {
+        main();
+    }
+    else if (restart == 2) {
+        endGme();
+    }
+    else ("It appears that the ghosts haunted you and you did not input a proper choice, try again.);
+          restartGame();
+}
 //Starts the game
 startGame();
