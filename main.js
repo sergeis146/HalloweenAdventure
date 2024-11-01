@@ -4,9 +4,10 @@ let churchChoice;
 let graveChoice;
 let weapon;
 let outcome;
+let name;
 //main game code
 function startGame() {
-    let name = prompt("What is your name?");
+    name = prompt("What is your name?");
     alert(`Welcome, ${name}, to Haunted Cemetery Exploration!`);
     main();
 }
@@ -48,7 +49,7 @@ function graveyard(){
 //starts off the church path
 function church(){
     alert(`So ${name}, you have chosen to explore the church`);
-    alert("You enter the churh, walking you hear a loud thud in the back of the church")
+    alert("You enter the church, walking you hear a loud thud in the back of the church")
     churchChoice = +prompt("Yu jump from how scared you are, do you (1) keep walking, (2) run away, or (3) take something off the floor and fight")
     church2Choice();
 }
@@ -80,6 +81,9 @@ function church2Choice(){
     else if (churchChoice == 2) {
         alert(`You run out of the church, someone behind you yells ${name} soon you see the exit of the graveyard, the door is closed, your friends left you.`)
         endGame();
+    }
+    else if (churchChoice == 3) {
+        churchFight();
     }
     else {
         alert("You did not input a valid answer, please try again.");
