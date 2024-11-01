@@ -97,7 +97,7 @@ function churchFight() {
         alert(`You pickup the ${weapon} and try to fight, but it snaps in half and you stand there, waiting for your end. The creatures leaps onto you and the next thing you know you are lying in the hospital bed, your friends surrounding you.`);
         endGame();
     }
-    else if (outcome == 2 {
+    else if (outcome == 2) {
         alert(` You pickup the ${weapon} and attack, you hit the creature in the head and it falls down, you turn around and run away.`);
         endGame();
     }
